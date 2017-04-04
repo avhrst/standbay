@@ -1,0 +1,8 @@
+run{
+crosscheck backupset;
+delete expired backupset;
+delete backupset;
+crosscheck archivelog all;
+delete expired archivelog all;
+delete archivelog all;
+}

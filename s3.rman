@@ -1,0 +1,11 @@
+run{
+crosscheck backupset;
+delete expired backupset;
+delete backupset;
+crosscheck archivelog all;
+delete expired archivelog all;
+delete archivelog all;
+backup as compressed backupset database format='/mnt/export/backup_%U.bkp';
+backup as compressed backupset archivelog from scn=1 format='/mnt/export/arch_%U.arc';
+duplicate target database to orcl nofilenamecheck;
+}
