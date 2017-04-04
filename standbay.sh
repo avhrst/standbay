@@ -16,4 +16,4 @@ cd /home/oracle/standbay
 
 rman  target / @s1.rman;
 sqlplus / as sysdba @s2.sql;
-rman target sys/AvhrSt31415926@master auxiliary / @s3.rman;
+rman target sys/***@master auxiliary / @s3.rman;
